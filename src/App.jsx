@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 
-// ─── DATA ─────────────────────────────────────────────────────────────────────
+// ─── DATA ───────────────────────────────────────────────────────────────────
 
 const NAV_LINKS = [
   { label: 'Home', href: 'home' },
@@ -26,11 +26,11 @@ const SERVICES = [
       'Share trailer space with other shippers and reduce freight costs without sacrificing reliability or delivery windows.',
   },
   {
-    icon: '🚢',
-    title: 'Intermodal & Container',
+    icon: '🚚',
+    title: 'Auto Transportation ',
     tag: null,
     desc:
-      'Seamless domestic and cross-border container transport by rail, port, or road — for both import and export cargo.',
+      'Auto transportation refers to the movement of people and goods using motor vehicles such as cars, trucks, buses, and motorcycles.',
   },
   {
     icon: '❄️',
@@ -80,23 +80,23 @@ const TESTIMONIALS = [
   {
     initials: 'MR',
     name: 'Michael R.',
-    title: 'Supply Chain Director',
+    title: '',
     quote:
       'Very reasonable pricing and superb service. Staff was in constant communication throughout, making the entire process seamless. Delivered exactly on time.',
   },
   {
     initials: 'SK',
     name: 'Sarah K.',
-    title: 'Operations Manager',
+    title: '',
     quote:
-      'We handed them 20 containers on short notice and they handled it without missing a beat. Saved us a significant amount and execution was flawless.',
+      'This company did excellent shipping my vehicle with communication throughout the shipment along with very competitive pricing. This company is top notch compared to many other shippers that I have used and I highly recommend!!',
   },
   {
     initials: 'DL',
     name: 'David L.',
-    title: 'Logistics Coordinator',
+    title: '',
     quote:
-      'JBM Cargo is our go-to partner for all cross-border shipments. Transparent, reliable, and always one step ahead of potential issues.',
+      'V REY TRANSPORTATION LLC is our go-to partner for all cross-border shipments. Transparent, reliable, and always one step ahead of potential issues.',
   },
 ]
 
@@ -126,7 +126,7 @@ const FEATURES = [
   },
 ]
 
-// ─── HOOKS ────────────────────────────────────────────────────────────────────
+// ─── HOOKS ──────────────────────────────────────────────────────────────────
 
 function useScrolled(threshold = 60) {
   const [scrolled, setScrolled] = useState(false)
@@ -159,7 +159,7 @@ function useInView() {
   return [ref, inView]
 }
 
-// ─── PRIMITIVES ───────────────────────────────────────────────────────────────
+// ─── PRIMITIVES────────────────────────────────────────────────────────
 
 const FONT_DISPLAY = { fontFamily: "'Barlow Condensed', sans-serif" }
 const FONT_BODY = { fontFamily: "'Barlow', sans-serif" }
@@ -277,10 +277,10 @@ function Navbar() {
             </div>
             <div className="text-left">
               <div
-                className="font-black text-white text-[18px] tracking-[0.12em] leading-none"
+                className="font-black text-white text-[14px] tracking-[0.12em] leading-none"
                 style={FONT_DISPLAY}
               >
-                JBM CARGO
+                V REY TRANSPORTATION
               </div>
               <div
                 className="text-amber-400 text-[10px] tracking-[0.35em] font-semibold leading-none mt-1"
@@ -406,7 +406,7 @@ function Hero() {
               className="text-amber-400 text-[11px] tracking-[0.3em] uppercase font-semibold"
               style={FONT_BODY}
             >
-              Pittsburgh, PA · Licensed & Insured
+              BROOKLYN, NY · Licensed & Insured
             </span>
           </div>
 
@@ -442,9 +442,9 @@ function Hero() {
               animation: 'fadeUp .9s ease .34s both',
             }}
           >
-            JBM Cargo LLC is a full-service 3PL carrier delivering FTL, LTL,
-            intermodal, reefer, and expedited freight solutions across all 48
-            contiguous states. We don't just move freight — we move your
+            V REY TRANSPORTATION LLC is a full-service 3PL carrier delivering
+            FTL, LTL, intermodal, reefer, and expedited freight solutions across
+            all 48 contiguous states. We don't just move freight — we move your
             business forward.
           </p>
 
@@ -509,7 +509,7 @@ function Hero() {
                     className="text-white font-bold text-lg"
                     style={FONT_DISPLAY}
                   >
-                    JBM-2024-0847
+                    V REY TRANSPORTATION LLC
                   </div>
                 </div>
                 <div
@@ -750,16 +750,17 @@ function About() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-20 items-center">
         <FadeIn direction="left">
-          <Eyebrow>About JBM Cargo</Eyebrow>
+          <Eyebrow>About V REY TRANSPORTATION LLC</Eyebrow>
           <SectionHeading>
             Your Strategic
             <br />
             <span className="text-amber-400">Logistics Partner</span>
           </SectionHeading>
           <p className="text-zinc-400 leading-relaxed mb-5" style={FONT_BODY}>
-            JBM Cargo LLC is a Pittsburgh-based carrier and full-service
-            logistics provider built on a bedrock of honesty, integrity, and an
-            unwavering commitment to delivering on time, every time.
+            V REY TRANSPORTATION LLC is a Brooklyn-based carrier and
+            full-service logistics provider built on a bedrock of honesty,
+            integrity, and an unwavering commitment to delivering on time, every
+            time.
           </p>
           <p className="text-zinc-400 leading-relaxed mb-8" style={FONT_BODY}>
             We don't just move freight — we become a strategic extension of your
@@ -827,16 +828,16 @@ function About() {
                   </div>
                   <div>
                     <div
-                      className="text-white font-black text-2xl tracking-wider uppercase"
+                      className="text-white font-black text-xl tracking-wider uppercase"
                       style={FONT_DISPLAY}
                     >
-                      JBM Cargo LLC
+                      V REY TRANSPORTATION LLC
                     </div>
                     <div
                       className="text-amber-400 text-[11px] tracking-widest font-semibold mt-0.5"
                       style={FONT_BODY}
                     >
-                      PITTSBURGH, PA
+                      BROOKLYN, NY
                     </div>
                   </div>
                 </div>
@@ -845,7 +846,7 @@ function About() {
                   {[
                     ['USDOT Number', '4051430'],
                     ['Phone', '347-853-2299'],
-                    ['Address', 'Pass'],
+                    ['Address', '80 AVENUE P APT E10 BROOKLYN, NY 11204'],
                     ['Coverage', '48 Contiguous States'],
                     [
                       'Specialties',
@@ -916,7 +917,7 @@ function WhyUs() {
               className="text-amber-400 text-[11px] tracking-[0.28em] uppercase font-semibold"
               style={FONT_BODY}
             >
-              Why JBM Cargo
+              V REY TRANSPORTATION LLC
             </span>
             <div className="h-px w-10 bg-amber-500" />
           </div>
@@ -925,17 +926,17 @@ function WhyUs() {
             style={{
               ...FONT_DISPLAY,
               fontSize: 'clamp(2.4rem,5vw,4rem)',
-              fontWeight: 900,
+              fontWeight: 700,
             }}
           >
-            The <span className="text-amber-400">JBM</span> Difference
+            The <span className="text-amber-400">V REY</span> TRANSPORTATION LLC
           </h2>
           <p
             className="text-zinc-500 max-w-xl mx-auto leading-relaxed"
             style={FONT_BODY}
           >
-            Dozens of carriers can move your freight. Only one delivers the JBM
-            experience.
+            Dozens of carriers can move your freight. Only one delivers the{' '}
+            <br /> V REY TRANSPORTATION LLC experience.
           </p>
         </FadeIn>
 
@@ -1050,7 +1051,7 @@ function Contact() {
           <SectionHeading>
             Let's Move
             <br />
-            <span className="text-amber-400">Your Freight</span>
+            <span className="text-amber-400">Your VEHICLE</span>
           </SectionHeading>
           <p className="text-zinc-400 leading-relaxed mb-10" style={FONT_BODY}>
             Ready to get a quote or discuss your logistics needs? Our team
@@ -1063,13 +1064,13 @@ function Contact() {
               {
                 icon: '📍',
                 label: 'Address',
-                value: 'Pass',
+                value: '80 AVENUE P APT E10 BROOKLYN, NY 11204',
               },
               { icon: '📞', label: 'Phone', value: '347-853-2299' },
               {
                 icon: '🕐',
                 label: 'Hours',
-                value: 'Mon–Fri: 7AM–7PM ET\nEmergency: 24/7',
+                value: 'Mon–Sat: 7AM–7PM ET\nEmergency: 24/7',
               },
             ].map(({ icon, label, value }) => (
               <div key={label} className="flex items-start gap-4">
@@ -1242,7 +1243,7 @@ function Footer() {
                   className="font-black text-white text-xl tracking-widest uppercase leading-none"
                   style={FONT_DISPLAY}
                 >
-                  JBM Cargo LLC
+                  V REY TRANSPORTATION LLC
                 </div>
                 <div
                   className="text-amber-500 text-[10px] tracking-[0.28em] font-semibold mt-0.5"
@@ -1256,8 +1257,8 @@ function Footer() {
               className="text-zinc-600 text-sm leading-relaxed max-w-sm mb-3"
               style={FONT_BODY}
             >
-              Pittsburgh-based carrier serving all 48 contiguous states. Built
-              on honesty, integrity, and on-time delivery.
+              Brooklyn-based carrier serving all 48 contiguous states. Built on
+              honesty, integrity, and on-time delivery.
             </p>
             <div className="text-zinc-700 text-xs" style={FONT_BODY}>
               USDOT #4051430 · <a href="tel:+347-853-2299">347-853-2299</a>
@@ -1308,7 +1309,7 @@ function Footer() {
 
         <div className="border-t border-zinc-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-zinc-700 text-xs" style={FONT_BODY}>
-            © {new Date().getFullYear()} Pass
+            © 2023-2026 by V REY TRANSPORTATION LLC
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
