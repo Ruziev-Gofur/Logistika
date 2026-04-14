@@ -845,7 +845,7 @@ function About() {
                 <div className="space-y-5 mb-8">
                   {[
                     ['USDOT Number', '4051430'],
-                    ['Phone', '347-853-2299'],
+                    ['Phone', <a href="tel:+347-853-2299">347-853-2299</a>],
                     ['Address', '80 AVENUE P APT E10 BROOKLYN, NY 11204'],
                     ['Coverage', '48 Contiguous States'],
                     [
@@ -1066,7 +1066,11 @@ function Contact() {
                 label: 'Address',
                 value: '80 AVENUE P APT E10 BROOKLYN, NY 11204',
               },
-              { icon: '📞', label: 'Phone', value: '347-853-2299' },
+              {
+                icon: '📞',
+                label: 'Phone',
+                value: <a href="tel:+347-853-2299">347-853-2299</a>,
+              },
               {
                 icon: '🕐',
                 label: 'Hours',
